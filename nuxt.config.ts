@@ -26,7 +26,6 @@ export default defineNuxtConfig({
         file: "ar.json",
       },
     ],
-    lazy: true,
     langDir: "../locales",
     defaultLocale: "en",
     strategy: "no_prefix",
@@ -42,6 +41,21 @@ export default defineNuxtConfig({
   },
 
   css: ["~/assets/css/main.css"],
+
+  ssr: true,
+
+  nitro: {
+    preset: 'static',
+    prerender: {
+      routes: ['/'],
+      crawlLinks: true
+    }
+  },
+
+  app: {
+    baseURL: '/',
+    buildAssetsDir: '/_nuxt/',
+  },
 
   routeRules: {
     "/": { prerender: true },
