@@ -1,13 +1,13 @@
 <script setup lang="ts">
-const { locale, locales, setLocale } = useI18n();
+const { locale, locales, setLocale } = useI18n()
 
 const availableLocales = computed(() => {
-  return locales.value as Array<{ code: string; name: string }>;
-});
+  return locales.value as Array<{ code: string, name: string }>
+})
 
 const _currentLocale = computed(() => {
-  return availableLocales.value.find((l) => l.code === locale.value);
-});
+  return availableLocales.value.find(l => l.code === locale.value)
+})
 </script>
 
 <template>

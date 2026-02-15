@@ -1,52 +1,55 @@
 <script setup lang="ts">
-const { t } = useI18n();
+const { t } = useI18n()
 
 const skills = ref({
   frontend: [
-    { name: "Vue.js", icon: "i-lucide-layers", level: 95 },
-    { name: "Nuxt.js", icon: "i-lucide-box", level: 90 },
-    { name: "React", icon: "i-lucide-atom", level: 85 },
-    { name: "JavaScript", icon: "i-lucide-code", level: 95 },
-    { name: "TypeScript", icon: "i-lucide-file-code", level: 80 },
-    { name: "HTML/CSS", icon: "i-lucide-palette", level: 95 },
-    { name: "Tailwind CSS", icon: "i-lucide-paintbrush", level: 90 },
-    { name: "Bootstrap", icon: "i-lucide-layout", level: 85 },
+    { name: 'Vue.js', icon: 'i-lucide-layers', level: 95 },
+    { name: 'Nuxt.js', icon: 'i-lucide-box', level: 90 },
+    { name: 'React', icon: 'i-lucide-atom', level: 85 },
+    { name: 'JavaScript', icon: 'i-lucide-code', level: 95 },
+    { name: 'TypeScript', icon: 'i-lucide-file-code', level: 80 },
+    { name: 'HTML/CSS', icon: 'i-lucide-palette', level: 95 },
+    { name: 'Tailwind CSS', icon: 'i-lucide-paintbrush', level: 90 },
+    { name: 'Bootstrap', icon: 'i-lucide-layout', level: 85 }
   ],
   backend: [
-    { name: "Node.js", icon: "i-lucide-server", level: 80 },
-    { name: "Express.js", icon: "i-lucide-zap", level: 80 },
-    { name: "MongoDB", icon: "i-lucide-database", level: 75 },
-    { name: "MySQL", icon: "i-lucide-hard-drive", level: 80 },
-    { name: "Java Swing", icon: "i-lucide-coffee", level: 70 },
+    { name: 'Node.js', icon: 'i-lucide-server', level: 80 },
+    { name: 'Express.js', icon: 'i-lucide-zap', level: 80 },
+    { name: 'MongoDB', icon: 'i-lucide-database', level: 75 },
+    { name: 'MySQL', icon: 'i-lucide-hard-drive', level: 80 },
+    { name: 'Java Swing', icon: 'i-lucide-coffee', level: 70 }
   ],
   tools: [
-    { name: "Git", icon: "i-lucide-git-branch", level: 90 },
-    { name: "GitHub", icon: "i-lucide-github", level: 90 },
-    { name: "Linux (Ubuntu)", icon: "i-lucide-terminal", level: 80 },
-    { name: "Adobe Photoshop", icon: "i-lucide-image", level: 85 },
-    { name: "Adobe Illustrator", icon: "i-lucide-pen-tool", level: 80 },
-    { name: "Adobe InDesign", icon: "i-lucide-book-open", level: 75 },
-    { name: "Agile/Scrum", icon: "i-lucide-kanban", level: 80 },
+    { name: 'Git', icon: 'i-lucide-git-branch', level: 90 },
+    { name: 'GitHub', icon: 'i-lucide-github', level: 90 },
+    { name: 'Linux (Ubuntu)', icon: 'i-lucide-terminal', level: 80 },
+    { name: 'Adobe Photoshop', icon: 'i-lucide-image', level: 85 },
+    { name: 'Adobe Illustrator', icon: 'i-lucide-pen-tool', level: 80 },
+    { name: 'Adobe InDesign', icon: 'i-lucide-book-open', level: 75 },
+    { name: 'Agile/Scrum', icon: 'i-lucide-kanban', level: 80 }
   ],
   hardware: [
-    { name: "Arduino", icon: "i-lucide-cpu", level: 85 },
-    { name: "Microcontrollers", icon: "i-lucide-circuit-board", level: 80 },
-    { name: "IoT", icon: "i-lucide-wifi", level: 75 },
-    { name: "Flutter", icon: "i-lucide-smartphone", level: 70 },
-    { name: "Networking", icon: "i-lucide-network", level: 75 },
-  ],
-});
+    { name: 'Arduino', icon: 'i-lucide-cpu', level: 85 },
+    { name: 'Microcontrollers', icon: 'i-lucide-circuit-board', level: 80 },
+    { name: 'IoT', icon: 'i-lucide-wifi', level: 75 },
+    { name: 'Flutter', icon: 'i-lucide-smartphone', level: 70 },
+    { name: 'Networking', icon: 'i-lucide-network', level: 75 }
+  ]
+})
 
 const _categoryColors = {
-  frontend: "blue",
-  backend: "green",
-  tools: "purple",
-  hardware: "orange",
-};
+  frontend: 'blue',
+  backend: 'green',
+  tools: 'purple',
+  hardware: 'orange'
+}
 </script>
 
 <template>
-  <section id="skills" class="py-20 px-4">
+  <section
+    id="skills"
+    class="py-20 px-4"
+  >
     <div class="max-w-7xl mx-auto">
       <div
         v-motion
@@ -54,8 +57,16 @@ const _categoryColors = {
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
         class="text-center mb-16"
       >
-        <UBadge size="lg" color="primary" variant="soft" class="mb-4">
-          <UIcon name="i-lucide-sparkles" class="mr-1" />
+        <UBadge
+          size="lg"
+          color="primary"
+          variant="soft"
+          class="mb-4"
+        >
+          <UIcon
+            name="i-lucide-sparkles"
+            class="mr-1"
+          />
           {{ t("skills.badge") }}
         </UBadge>
         <h2
@@ -77,7 +88,7 @@ const _categoryColors = {
           :visible-once="{
             opacity: 1,
             x: 0,
-            transition: { duration: 600, delay: 100 },
+            transition: { duration: 600, delay: 100 }
           }"
           class="border-2 border-blue-500/20 hover:border-blue-500/50 transition-colors"
         >
@@ -109,7 +120,10 @@ const _categoryColors = {
             >
               <div class="flex items-center justify-between mb-1">
                 <div class="flex items-center gap-2">
-                  <UIcon :name="skill.icon" class="text-blue-500" />
+                  <UIcon
+                    :name="skill.icon"
+                    class="text-blue-500"
+                  />
                   <span class="font-medium text-gray-700 dark:text-gray-300">{{
                     skill.name
                   }}</span>
@@ -135,7 +149,7 @@ const _categoryColors = {
           :visible-once="{
             opacity: 1,
             x: 0,
-            transition: { duration: 600, delay: 200 },
+            transition: { duration: 600, delay: 200 }
           }"
           class="border-2 border-green-500/20 hover:border-green-500/50 transition-colors"
         >
@@ -144,7 +158,10 @@ const _categoryColors = {
               <div
                 class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center"
               >
-                <UIcon name="i-lucide-server" class="text-2xl text-green-500" />
+                <UIcon
+                  name="i-lucide-server"
+                  class="text-2xl text-green-500"
+                />
               </div>
               <div>
                 <h3 class="text-xl font-semibold">
@@ -164,7 +181,10 @@ const _categoryColors = {
             >
               <div class="flex items-center justify-between mb-1">
                 <div class="flex items-center gap-2">
-                  <UIcon :name="skill.icon" class="text-green-500" />
+                  <UIcon
+                    :name="skill.icon"
+                    class="text-green-500"
+                  />
                   <span class="font-medium text-gray-700 dark:text-gray-300">{{
                     skill.name
                   }}</span>
@@ -190,7 +210,7 @@ const _categoryColors = {
           :visible-once="{
             opacity: 1,
             x: 0,
-            transition: { duration: 600, delay: 300 },
+            transition: { duration: 600, delay: 300 }
           }"
           class="border-2 border-purple-500/20 hover:border-purple-500/50 transition-colors"
         >
@@ -215,10 +235,17 @@ const _categoryColors = {
             </div>
           </template>
           <div class="space-y-3">
-            <div v-for="skill in skills.tools" :key="skill.name" class="group">
+            <div
+              v-for="skill in skills.tools"
+              :key="skill.name"
+              class="group"
+            >
               <div class="flex items-center justify-between mb-1">
                 <div class="flex items-center gap-2">
-                  <UIcon :name="skill.icon" class="text-purple-500" />
+                  <UIcon
+                    :name="skill.icon"
+                    class="text-purple-500"
+                  />
                   <span class="font-medium text-gray-700 dark:text-gray-300">{{
                     skill.name
                   }}</span>
@@ -244,7 +271,7 @@ const _categoryColors = {
           :visible-once="{
             opacity: 1,
             x: 0,
-            transition: { duration: 600, delay: 400 },
+            transition: { duration: 600, delay: 400 }
           }"
           class="border-2 border-orange-500/20 hover:border-orange-500/50 transition-colors"
         >
@@ -253,7 +280,10 @@ const _categoryColors = {
               <div
                 class="w-12 h-12 rounded-xl bg-orange-500/10 flex items-center justify-center"
               >
-                <UIcon name="i-lucide-cpu" class="text-2xl text-orange-500" />
+                <UIcon
+                  name="i-lucide-cpu"
+                  class="text-2xl text-orange-500"
+                />
               </div>
               <div>
                 <h3 class="text-xl font-semibold">
@@ -273,7 +303,10 @@ const _categoryColors = {
             >
               <div class="flex items-center justify-between mb-1">
                 <div class="flex items-center gap-2">
-                  <UIcon :name="skill.icon" class="text-orange-500" />
+                  <UIcon
+                    :name="skill.icon"
+                    class="text-orange-500"
+                  />
                   <span class="font-medium text-gray-700 dark:text-gray-300">{{
                     skill.name
                   }}</span>

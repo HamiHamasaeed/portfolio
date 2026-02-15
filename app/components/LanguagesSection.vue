@@ -1,54 +1,57 @@
 <script setup lang="ts">
-const { t } = useI18n();
+const { t } = useI18n()
 
 const languages = [
   {
-    name: "Kurdish",
+    name: 'Kurdish',
     native: true,
     level: 100,
     skills: {
-      speaking: "Native",
-      reading: "Native",
-      writing: "Native",
+      speaking: 'Native',
+      reading: 'Native',
+      writing: 'Native'
     },
-    flagType: "kurdistan",
+    flagType: 'kurdistan'
   },
   {
-    name: "English",
+    name: 'English',
     native: false,
     level: 80,
-    levelCode: "B2",
+    levelCode: 'B2',
     skills: {
-      speaking: "B2",
-      reading: "B2",
-      writing: "B2",
+      speaking: 'B2',
+      reading: 'B2',
+      writing: 'B2'
     },
-    flagType: "usa",
+    flagType: 'usa'
   },
   {
-    name: "Arabic",
+    name: 'Arabic',
     native: false,
     level: 60,
-    levelCode: "B1",
+    levelCode: 'B1',
     skills: {
-      speaking: "A1",
-      reading: "B1",
-      writing: "A1",
+      speaking: 'A1',
+      reading: 'B1',
+      writing: 'A1'
     },
-    flagType: "iraq",
-  },
-];
+    flagType: 'iraq'
+  }
+]
 
 const _getLevelColor = (level: number) => {
-  if (level >= 90) return "green";
-  if (level >= 70) return "blue";
-  if (level >= 50) return "yellow";
-  return "gray";
-};
+  if (level >= 90) return 'green'
+  if (level >= 70) return 'blue'
+  if (level >= 50) return 'yellow'
+  return 'gray'
+}
 </script>
 
 <template>
-  <section id="languages" class="py-20 px-4">
+  <section
+    id="languages"
+    class="py-20 px-4"
+  >
     <div class="max-w-5xl mx-auto">
       <div
         v-motion
@@ -56,8 +59,16 @@ const _getLevelColor = (level: number) => {
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
         class="text-center mb-12"
       >
-        <UBadge size="lg" color="primary" variant="soft" class="mb-4">
-          <UIcon name="i-lucide-languages" class="mr-1" />
+        <UBadge
+          size="lg"
+          color="primary"
+          variant="soft"
+          class="mb-4"
+        >
+          <UIcon
+            name="i-lucide-languages"
+            class="mr-1"
+          />
           {{ t("languages.badge") }}
         </UBadge>
         <h2
@@ -80,7 +91,7 @@ const _getLevelColor = (level: number) => {
           :visible-once="{
             opacity: 1,
             y: 0,
-            transition: { duration: 600, delay: index * 100 },
+            transition: { duration: 600, delay: index * 100 }
           }"
           class="text-center hover:shadow-lg transition-all duration-300"
           :class="lang.native ? 'border-2 border-green-500/30' : ''"
@@ -132,9 +143,7 @@ const _getLevelColor = (level: number) => {
               >
                 <div class="h-1/3 bg-red-600" />
                 <div class="h-1/3 bg-white flex items-center justify-center">
-                  <span class="text-green-700 text-[6px] font-bold"
-                    >الله أكبر</span
-                  >
+                  <span class="text-green-700 text-[6px] font-bold">الله أكبر</span>
                 </div>
                 <div class="h-1/3 bg-black" />
               </div>
@@ -174,7 +183,7 @@ const _getLevelColor = (level: number) => {
                     ? 'bg-linear-to-r from-green-400 to-green-600'
                     : lang.level >= 70
                       ? 'bg-linear-to-r from-blue-400 to-blue-600'
-                      : 'bg-linear-to-r from-yellow-400 to-yellow-600',
+                      : 'bg-linear-to-r from-yellow-400 to-yellow-600'
                 ]"
                 :style="{ width: `${lang.level}%` }"
               />
@@ -211,7 +220,7 @@ const _getLevelColor = (level: number) => {
         :initial="{ opacity: 0 }"
         :visible-once="{
           opacity: 1,
-          transition: { duration: 600, delay: 400 },
+          transition: { duration: 600, delay: 400 }
         }"
         class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400"
       >
