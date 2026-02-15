@@ -10,8 +10,14 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Muhammad HamaSaeed",
-    "title": "Teacher | Front-end Developer | Codify Co-Founder",
-    "description": "Passionate about technology and education, I aim to innovate and inspire through my work in software development and teaching."
+    "title": "Developer | Teacher | Codify Co-Founder",
+    "description": "Passionate computer engineer and educator based in Sulaymaniyah, Iraq. I specialize in building modern web applications with Vue.js, Nuxt.js, and React, as well as IoT projects with Arduino and microcontrollers, while inspiring the next generation through teaching.",
+    "cofounder": "Co-Founder {'@'} Codify",
+    "location": "Sulaymaniyah, Iraq",
+    "available": "Open to work",
+    "yearsExp": "Years Exp.",
+    "projects": "Projects",
+    "languages": "Languages"
   },
   "about": {
     "title": "About Me",
@@ -19,44 +25,119 @@
   },
   "skills": {
     "title": "Technical Skills",
+    "badge": "What I Work With",
+    "description": "Technologies and tools I use to bring ideas to life",
     "frontend": "Frontend Development",
     "backend": "Backend & Database",
-    "tools": "Tools & Others",
-    "hardware": "Hardware & IoT"
+    "tools": "Tools & Design",
+    "hardware": "Hardware & IoT",
+    "technologies": "technologies"
   },
   "experience": {
     "title": "Work Experience",
+    "badge": "My Journey",
+    "description": "A timeline of my professional experiences and growth",
     "current": "Current",
+    "cofounder": "Co-Founder",
     "jobs": {
       "codify": {
-        "title": "Software Developer & Social Media Manager",
+        "title": "Software Developer & Co-Founder",
         "company": "Codify",
         "location": "Sulaymaniyah, Iraq",
         "period": "Dec 2023 - Present",
-        "description": "Working as a front-end developer and managing social media pages."
+        "description": "Co-founded Codify, a development group focused on building modern web applications and managing social media presence. Leading front-end development projects using Vue.js and Nuxt.js."
       },
       "runaki": {
         "title": "Computer Science Lecturer",
         "company": "Runaki Institute",
         "location": "Sulaymaniyah, Iraq",
         "period": "Sep 2022 - Present",
-        "description": "Teaching computer-related courses and delivering lectures."
+        "description": "Teaching computer science courses including programming fundamentals, web development, and software engineering concepts to aspiring developers."
       },
       "liya": {
         "title": "IT & Maintenance",
         "company": "Liya Dry Clean",
         "location": "Sulaymaniyah, Iraq",
         "period": "Mar 2023 - Sep 2023",
-        "description": "Handled IT support and maintenance operations."
+        "description": "Handled IT support, system maintenance, and technical troubleshooting operations."
+      },
+      "ruga": {
+        "title": "English Teacher",
+        "company": "Ruga",
+        "location": "Sulaymaniyah, Iraq",
+        "period": "Jun 2022 - Aug 2022",
+        "description": "Taught English language courses to students, focusing on conversation and practical language skills."
+      },
+      "smarthealth": {
+        "title": "IT Intern",
+        "company": "Smart Health Tower",
+        "location": "Sulaymaniyah, Iraq",
+        "period": "Jun 2021 - Sep 2021",
+        "description": "Completed internship in healthcare IT environment, gaining experience in technical support and system administration."
+      },
+      "studentcastle": {
+        "title": "Graphic Designer",
+        "company": "Student Castle Institute",
+        "location": "Halabja, Iraq",
+        "period": "Feb 2020 - Aug 2021",
+        "description": "Created visual designs, marketing materials, and educational content using Adobe Creative Suite."
+      },
+      "mukryan": {
+        "title": "Assistant Teacher",
+        "company": "Mukryan Institute",
+        "location": "Sulaymaniyah, Iraq",
+        "period": "Jun 2019 - Aug 2019",
+        "description": "Assisted in teaching computer courses and provided support to students in their learning journey."
+      },
+      "mobileshop": {
+        "title": "Sales Processor",
+        "company": "Mobile Accessories Shop",
+        "location": "Halabja, Iraq",
+        "period": "Feb 2016 - Dec 2017",
+        "description": "Managed sales operations, customer service, and inventory management for mobile accessories."
       }
     }
   },
   "education": {
     "title": "Education",
-    "degree": "Bachelor of Computer Engineering",
-    "university": "Komar University of Science and Technology",
-    "period": "2018 - 2022",
-    "location": "Sulaymaniyah, Iraq"
+    "badge": "Academic Background",
+    "visitWebsite": "Visit Website",
+    "certifications": "Certifications & Licenses",
+    "items": {
+      "komar-degree": {
+        "degree": "Bachelor of Computer Engineering",
+        "institution": "Komar University of Science and Technology",
+        "period": "2018 - 2022",
+        "location": "Sulaymaniyah, Iraq"
+      },
+      "komar-english": {
+        "degree": "CEFR B2 English Level",
+        "institution": "Komar University of Science and Technology",
+        "period": "2017 - 2018",
+        "location": "Sulaymaniyah, Iraq"
+      }
+    }
+  },
+  "languages": {
+    "title": "Language Skills",
+    "badge": "Communication",
+    "description": "Languages I speak and write",
+    "native": "Native",
+    "speaking": "Speaking",
+    "reading": "Reading",
+    "writing": "Writing",
+    "cefrNote": "Levels based on CEFR: A1-A2 (Basic), B1-B2 (Independent), C1-C2 (Proficient)",
+    "langs": {
+      "kurdish": {
+        "name": "Kurdish"
+      },
+      "english": {
+        "name": "English"
+      },
+      "arabic": {
+        "name": "Arabic"
+      }
+    }
   },
   "projects": {
     "title": "Featured Projects",

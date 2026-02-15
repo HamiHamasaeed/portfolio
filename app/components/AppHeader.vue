@@ -20,34 +20,38 @@ const scrollToSection = (sectionId: string) => {
   >
     <nav class="max-w-7xl mx-auto px-4 py-4">
       <div class="flex items-center justify-between">
-        <!-- Logo/Name -->
-        <button
-          @click="scrollToSection('home')"
-          class="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
-        >
-          MH
-        </button>
-
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center gap-6">
+        <!-- Logo/Name - fixed width -->
+        <div class="w-32">
           <button
-            v-for="item in [
-              'home',
-              'skills',
-              'experience',
-              'projects',
-              'contact',
-            ]"
-            :key="item"
-            @click="scrollToSection(item)"
-            class="text-gray-800 dark:text-gray-200 hover:text-primary-500 transition-colors font-medium"
+            @click="scrollToSection('home')"
+            class="text-xl font-bold bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
           >
-            {{ t(`nav.${item}`) }}
+            MH
           </button>
         </div>
 
-        <!-- Right Actions -->
-        <div class="flex items-center gap-2">
+        <!-- Desktop Navigation - centered -->
+        <div class="hidden md:flex items-center justify-center flex-1">
+          <div class="flex items-center gap-6">
+            <button
+              v-for="item in [
+                'home',
+                'skills',
+                'experience',
+                'projects',
+                'contact',
+              ]"
+              :key="item"
+              @click="scrollToSection(item)"
+              class="text-gray-800 dark:text-gray-200 hover:text-primary-500 transition-colors font-medium"
+            >
+              {{ t(`nav.${item}`) }}
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Actions - fixed width to match left -->
+        <div class="flex items-center justify-end gap-2 w-32">
           <LanguageSwitcher />
           <ClientOnly>
             <UButton

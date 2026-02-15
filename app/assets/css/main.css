@@ -1,6 +1,33 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+/* Dark mode transition */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Smooth transitions for all color changes */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, fill, stroke, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Exclude elements that shouldn't transition */
+.no-transition,
+.no-transition *,
+canvas,
+video,
+iframe {
+  transition: none !important;
+}
+
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
 

@@ -1,6 +1,19 @@
 <script setup lang="ts">
 const { locale } = useI18n();
 
+// Language transition state
+const isChangingLanguage = ref(false);
+let languageTimeout: ReturnType<typeof setTimeout> | null = null;
+
+// Watch for language changes to trigger transition
+watch(locale, () => {
+  isChangingLanguage.value = true;
+  if (languageTimeout) clearTimeout(languageTimeout);
+  languageTimeout = setTimeout(() => {
+    isChangingLanguage.value = false;
+  }, 300);
+});
+
 // Watch for RTL changes
 watchEffect(() => {
   if (process.client) {
@@ -11,19 +24,23 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="relative min-h-screen">
-    <!-- Aurora Background -->
+  <div class="relative min-h-dvh">
+    <!-- Particle Background -->
     <AuroraBackground />
 
     <!-- Header -->
     <AppHeader />
 
-    <!-- Main Content -->
-    <main class="relative">
+    <!-- Main Content with language transition -->
+    <main
+      class="relative overflow-x-hidden transition-all duration-300"
+      :class="{ 'opacity-0 translate-y-2': isChangingLanguage }"
+    >
       <HeroSection />
       <SkillsSection />
       <ExperienceSection />
       <EducationSection />
+      <LanguagesSection />
       <ProjectsSection />
       <ContactSection />
     </main>
@@ -44,6 +61,13 @@ watchEffect(() => {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Fix mobile viewport height issues */
+html,
+body {
+  min-height: 100dvh;
+  overflow-x: hidden;
 }
 
 /* RTL Support & Font */
@@ -68,6 +92,13 @@ body {
 }
 
 body.dark {
-  background: #0f172a;
+  background: #0a0a0a;
+}
+
+/* Mobile card overflow fix */
+@media (max-width: 768px) {
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
 }
 </style>

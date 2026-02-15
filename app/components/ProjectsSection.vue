@@ -64,7 +64,7 @@ const projects = [
         >
           <!-- Project Image -->
           <div
-            class="mb-6 h-32 rounded-lg overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center p-4 border border-gray-200 dark:border-gray-700"
+            class="mb-6 h-32 rounded-lg overflow-hidden bg-linear-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center p-4 border border-gray-200 dark:border-gray-700"
           >
             <img
               :src="project.image"
