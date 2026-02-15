@@ -1,39 +1,42 @@
 <script setup lang="ts">
-const { t } = useI18n();
+const { t } = useI18n()
 
 const projects = [
   {
-    id: "codify",
-    name: "Codify Iraq",
-    description: t("projects.items.codify.description"),
-    tags: ["E-commerce", "Vue.js", "Web Development"],
-    image: "/JustCs.png",
-    url: "https://codifyiraq.com/en",
-    color: "blue",
+    id: 'codify',
+    name: 'Codify Iraq',
+    description: t('projects.items.codify.description'),
+    tags: ['E-commerce', 'Vue.js', 'Web Development'],
+    image: '/JustCs.png',
+    url: 'https://codifyiraq.com/en',
+    color: 'blue'
   },
   {
-    id: "ngk",
-    name: "NGK Lab",
-    description: t("projects.items.ngk.description"),
-    tags: ["Management System", "Nuxt.js", "Enterprise"],
-    image: "/NGKLogo.png",
-    url: "https://ngklab.com",
-    color: "green",
+    id: 'ngk',
+    name: 'NGK Lab',
+    description: t('projects.items.ngk.description'),
+    tags: ['Management System', 'Nuxt.js', 'Enterprise'],
+    image: '/NGKLogo.png',
+    url: 'https://ngklab.com',
+    color: 'green'
   },
   {
-    id: "azady",
-    name: "Azady",
-    description: t("projects.items.azady.description"),
-    tags: ["SaaS", "Management", "Automation"],
-    image: "/azadi.png",
-    url: "https://azady.org",
-    color: "purple",
-  },
-];
+    id: 'azady',
+    name: 'Azady',
+    description: t('projects.items.azady.description'),
+    tags: ['SaaS', 'Management', 'Automation'],
+    image: '/azadi.png',
+    url: 'https://azady.org',
+    color: 'purple'
+  }
+]
 </script>
 
 <template>
-  <section id="projects" class="py-20 px-4">
+  <section
+    id="projects"
+    class="py-20 px-4"
+  >
     <div class="max-w-7xl mx-auto">
       <div
         v-motion
@@ -58,7 +61,7 @@ const projects = [
           :visible-once="{
             opacity: 1,
             y: 0,
-            transition: { duration: 600, delay: index * 100 },
+            transition: { duration: 600, delay: index * 100 }
           }"
           class="hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
         >
@@ -70,7 +73,7 @@ const projects = [
               :src="project.image"
               :alt="project.name"
               class="max-h-full max-w-full object-contain"
-            />
+            >
           </div>
 
           <!-- Project Info -->

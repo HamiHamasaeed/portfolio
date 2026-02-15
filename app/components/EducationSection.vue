@@ -1,50 +1,53 @@
 <script setup lang="ts">
-const { t } = useI18n();
+const { t } = useI18n()
 
 const education = [
   {
-    id: "komar-degree",
-    degree: "Computer Engineering",
-    institution: "Komar University of Science and Technology",
-    period: "2018 - 2022",
-    location: "Sulaymaniyah, Iraq",
-    grade: "2.62 GPA",
-    icon: "i-lucide-graduation-cap",
-    color: "indigo",
-    url: "https://komar.edu.iq/",
-    main: true,
+    id: 'komar-degree',
+    degree: 'Computer Engineering',
+    institution: 'Komar University of Science and Technology',
+    period: '2018 - 2022',
+    location: 'Sulaymaniyah, Iraq',
+    grade: '2.62 GPA',
+    icon: 'i-lucide-graduation-cap',
+    color: 'indigo',
+    url: 'https://komar.edu.iq/',
+    main: true
   },
   {
-    id: "komar-english",
-    degree: "CEFR B2 English Level",
-    institution: "Komar University of Science and Technology",
-    period: "2017 - 2018",
-    location: "Sulaymaniyah, Iraq",
-    icon: "i-lucide-book-open",
-    color: "blue",
-    url: "https://komar.edu.iq/",
-    main: false,
-  },
-];
+    id: 'komar-english',
+    degree: 'CEFR B2 English Level',
+    institution: 'Komar University of Science and Technology',
+    period: '2017 - 2018',
+    location: 'Sulaymaniyah, Iraq',
+    icon: 'i-lucide-book-open',
+    color: 'blue',
+    url: 'https://komar.edu.iq/',
+    main: false
+  }
+]
 
 const certifications = [
   {
-    name: "Teaching Skills Course",
-    issuer: "Runaki Institute",
-    date: "Sep 2023",
-    icon: "i-lucide-award",
+    name: 'Teaching Skills Course',
+    issuer: 'Runaki Institute',
+    date: 'Sep 2023',
+    icon: 'i-lucide-award'
   },
   {
-    name: "Driving License (Class B)",
-    issuer: "Iraq",
-    date: "Nov 2022 - Nov 2027",
-    icon: "i-lucide-car",
-  },
-];
+    name: 'Driving License (Class B)',
+    issuer: 'Iraq',
+    date: 'Nov 2022 - Nov 2027',
+    icon: 'i-lucide-car'
+  }
+]
 </script>
 
 <template>
-  <section id="education" class="py-20 px-4">
+  <section
+    id="education"
+    class="py-20 px-4"
+  >
     <div class="max-w-5xl mx-auto">
       <div
         v-motion
@@ -52,8 +55,16 @@ const certifications = [
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
         class="text-center mb-12"
       >
-        <UBadge size="lg" color="primary" variant="soft" class="mb-4">
-          <UIcon name="i-lucide-graduation-cap" class="mr-1" />
+        <UBadge
+          size="lg"
+          color="primary"
+          variant="soft"
+          class="mb-4"
+        >
+          <UIcon
+            name="i-lucide-graduation-cap"
+            class="mr-1"
+          />
           {{ t("education.badge") }}
         </UBadge>
         <h2
@@ -73,7 +84,7 @@ const certifications = [
           :visible-once="{
             opacity: 1,
             x: 0,
-            transition: { duration: 600, delay: index * 150 },
+            transition: { duration: 600, delay: index * 150 }
           }"
           :class="edu.main ? 'border-2 border-indigo-500/30' : ''"
         >
@@ -141,7 +152,7 @@ const certifications = [
         :visible-once="{
           opacity: 1,
           y: 0,
-          transition: { duration: 600, delay: 300 },
+          transition: { duration: 600, delay: 300 }
         }"
       >
         <h3
@@ -159,7 +170,10 @@ const certifications = [
               <div
                 class="shrink-0 w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center"
               >
-                <UIcon :name="cert.icon" class="text-2xl text-amber-500" />
+                <UIcon
+                  :name="cert.icon"
+                  class="text-2xl text-amber-500"
+                />
               </div>
               <div>
                 <h4 class="font-semibold text-gray-900 dark:text-white">

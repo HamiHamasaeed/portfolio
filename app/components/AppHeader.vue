@@ -1,17 +1,17 @@
 <script setup lang="ts">
-const { t } = useI18n();
-const colorMode = useColorMode();
+const { t } = useI18n()
+const colorMode = useColorMode()
 
 const scrollToSection = (sectionId: string) => {
-  if (sectionId === "home") {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  if (sectionId === 'home') {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   } else {
-    const element = document.getElementById(sectionId);
+    const element = document.getElementById(sectionId)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' })
     }
   }
-};
+}
 </script>
 
 <template>
@@ -23,8 +23,8 @@ const scrollToSection = (sectionId: string) => {
         <!-- Logo/Name - fixed width -->
         <div class="w-32">
           <button
-            @click="scrollToSection('home')"
             class="text-xl font-bold bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            @click="scrollToSection('home')"
           >
             MH
           </button>
@@ -39,11 +39,11 @@ const scrollToSection = (sectionId: string) => {
                 'skills',
                 'experience',
                 'projects',
-                'contact',
+                'contact'
               ]"
               :key="item"
-              @click="scrollToSection(item)"
               class="text-gray-800 dark:text-gray-200 hover:text-primary-500 transition-colors font-medium"
+              @click="scrollToSection(item)"
             >
               {{ t(`nav.${item}`) }}
             </button>
@@ -61,8 +61,8 @@ const scrollToSection = (sectionId: string) => {
               color="neutral"
               variant="ghost"
               @click="
-                colorMode.preference =
-                  colorMode.value === 'dark' ? 'light' : 'dark'
+                colorMode.preference
+                  = colorMode.value === 'dark' ? 'light' : 'dark'
               "
             />
           </ClientOnly>

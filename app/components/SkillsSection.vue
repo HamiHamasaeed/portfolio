@@ -37,7 +37,7 @@ const skills = ref({
   ],
 });
 
-const categoryColors = {
+const _categoryColors = {
   frontend: "blue",
   backend: "green",
   tools: "purple",
@@ -122,7 +122,7 @@ const categoryColors = {
                 <div
                   class="h-full bg-linear-to-r from-blue-400 to-blue-600 rounded-full transition-all duration-500"
                   :style="{ width: `${skill.level}%` }"
-                ></div>
+                />
               </div>
             </div>
           </div>
@@ -147,7 +147,9 @@ const categoryColors = {
                 <UIcon name="i-lucide-server" class="text-2xl text-green-500" />
               </div>
               <div>
-                <h3 class="text-xl font-semibold">{{ t("skills.backend") }}</h3>
+                <h3 class="text-xl font-semibold">
+                  {{ t("skills.backend") }}
+                </h3>
                 <p class="text-sm text-gray-500">
                   {{ skills.backend.length }} {{ t("skills.technologies") }}
                 </p>
@@ -175,7 +177,7 @@ const categoryColors = {
                 <div
                   class="h-full bg-linear-to-r from-green-400 to-green-600 rounded-full transition-all duration-500"
                   :style="{ width: `${skill.level}%` }"
-                ></div>
+                />
               </div>
             </div>
           </div>
@@ -203,7 +205,9 @@ const categoryColors = {
                 />
               </div>
               <div>
-                <h3 class="text-xl font-semibold">{{ t("skills.tools") }}</h3>
+                <h3 class="text-xl font-semibold">
+                  {{ t("skills.tools") }}
+                </h3>
                 <p class="text-sm text-gray-500">
                   {{ skills.tools.length }} {{ t("skills.technologies") }}
                 </p>
@@ -227,7 +231,7 @@ const categoryColors = {
                 <div
                   class="h-full bg-linear-to-r from-purple-400 to-purple-600 rounded-full transition-all duration-500"
                   :style="{ width: `${skill.level}%` }"
-                ></div>
+                />
               </div>
             </div>
           </div>
@@ -282,7 +286,7 @@ const categoryColors = {
                 <div
                   class="h-full bg-linear-to-r from-orange-400 to-orange-600 rounded-full transition-all duration-500"
                   :style="{ width: `${skill.level}%` }"
-                ></div>
+                />
               </div>
             </div>
           </div>

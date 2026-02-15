@@ -1,26 +1,26 @@
 <script setup lang="ts">
-const { locale } = useI18n();
+const { locale } = useI18n()
 
 // Language transition state
-const isChangingLanguage = ref(false);
-let languageTimeout: ReturnType<typeof setTimeout> | null = null;
+const isChangingLanguage = ref(false)
+let languageTimeout: ReturnType<typeof setTimeout> | null = null
 
 // Watch for language changes to trigger transition
 watch(locale, () => {
-  isChangingLanguage.value = true;
-  if (languageTimeout) clearTimeout(languageTimeout);
+  isChangingLanguage.value = true
+  if (languageTimeout) clearTimeout(languageTimeout)
   languageTimeout = setTimeout(() => {
-    isChangingLanguage.value = false;
-  }, 300);
-});
+    isChangingLanguage.value = false
+  }, 300)
+})
 
 // Watch for RTL changes
 watchEffect(() => {
-  if (process.client) {
-    const dir = locale.value === "ar" || locale.value === "ku" ? "rtl" : "ltr";
-    document.documentElement.setAttribute("dir", dir);
+  if (import.meta.client) {
+    const dir = locale.value === 'ar' || locale.value === 'ku' ? 'rtl' : 'ltr'
+    document.documentElement.setAttribute('dir', dir)
   }
-});
+})
 </script>
 
 <template>

@@ -5,7 +5,7 @@ const availableLocales = computed(() => {
   return locales.value as Array<{ code: string; name: string }>;
 });
 
-const currentLocale = computed(() => {
+const _currentLocale = computed(() => {
   return availableLocales.value.find((l) => l.code === locale.value);
 });
 </script>

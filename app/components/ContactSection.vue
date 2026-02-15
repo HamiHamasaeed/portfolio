@@ -1,24 +1,27 @@
 <script setup lang="ts">
-const { t } = useI18n();
+const { t } = useI18n()
 
 interface SocialLink {
-  name: string;
-  url: string;
-  icon: string;
+  name: string
+  url: string
+  icon: string
 }
 
-const socialLinks = ref<SocialLink[]>([]);
+const socialLinks = ref<SocialLink[]>([])
 
 onMounted(async () => {
-  const data = await $fetch<{ links: SocialLink[] }>("/social-links.json");
+  const data = await $fetch<{ links: SocialLink[] }>('/social-links.json')
   if (data) {
-    socialLinks.value = data.links;
+    socialLinks.value = data.links
   }
-});
+})
 </script>
 
 <template>
-  <section id="contact" class="py-20 px-4">
+  <section
+    id="contact"
+    class="py-20 px-4"
+  >
     <div class="max-w-3xl mx-auto">
       <div
         v-motion

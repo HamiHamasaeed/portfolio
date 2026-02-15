@@ -39,7 +39,7 @@ const languages = [
   },
 ];
 
-const getLevelColor = (level: number) => {
+const _getLevelColor = (level: number) => {
   if (level >= 90) return "green";
   if (level >= 70) return "blue";
   if (level >= 50) return "yellow";
@@ -94,17 +94,17 @@ const getLevelColor = (level: number) => {
                 v-if="lang.flagType === 'kurdistan'"
                 class="w-12 h-8 rounded overflow-hidden shadow-sm flex flex-col"
               >
-                <div class="h-1/3 bg-red-500"></div>
+                <div class="h-1/3 bg-red-500" />
                 <div class="h-1/3 bg-white flex items-center justify-center">
                   <div
                     class="w-4 h-4 rounded-full bg-yellow-400 flex items-center justify-center"
                   >
                     <div
                       class="w-2 h-2 rounded-full border border-yellow-600"
-                    ></div>
+                    />
                   </div>
                 </div>
-                <div class="h-1/3 bg-green-500"></div>
+                <div class="h-1/3 bg-green-500" />
               </div>
               <!-- USA Flag -->
               <div
@@ -117,7 +117,7 @@ const getLevelColor = (level: number) => {
                     :key="i"
                     class="flex-1"
                     :class="i % 2 === 1 ? 'bg-red-600' : 'bg-white'"
-                  ></div>
+                  />
                 </div>
                 <div
                   class="absolute top-0 left-0 w-5 h-[57%] bg-blue-800 flex flex-wrap items-center justify-center p-0.5"
@@ -130,13 +130,13 @@ const getLevelColor = (level: number) => {
                 v-else-if="lang.flagType === 'iraq'"
                 class="w-12 h-8 rounded overflow-hidden shadow-sm flex flex-col"
               >
-                <div class="h-1/3 bg-red-600"></div>
+                <div class="h-1/3 bg-red-600" />
                 <div class="h-1/3 bg-white flex items-center justify-center">
                   <span class="text-green-700 text-[6px] font-bold"
                     >الله أكبر</span
                   >
                 </div>
-                <div class="h-1/3 bg-black"></div>
+                <div class="h-1/3 bg-black" />
               </div>
             </div>
             <h3 class="text-xl font-bold text-gray-900 dark:text-white">
@@ -177,7 +177,7 @@ const getLevelColor = (level: number) => {
                       : 'bg-linear-to-r from-yellow-400 to-yellow-600',
                 ]"
                 :style="{ width: `${lang.level}%` }"
-              ></div>
+              />
             </div>
           </div>
 
