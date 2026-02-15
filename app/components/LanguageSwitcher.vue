@@ -1,8 +1,10 @@
 <script setup lang="ts">
 const { locale, locales, setLocale } = useI18n()
 
+type LocaleCode = 'en' | 'ku' | 'ar'
+
 const availableLocales = computed(() => {
-  return locales.value as Array<{ code: string, name: string }>
+  return locales.value as Array<{ code: LocaleCode, name: string }>
 })
 
 const _currentLocale = computed(() => {
